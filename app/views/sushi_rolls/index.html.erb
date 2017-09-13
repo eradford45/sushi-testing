@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sushi Rolls</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sushi_rolls.each do |sushi_roll| %>
+      <tr>
+        <td><%= sushi_roll.name %></td>
+        <td><%= sushi_roll.price %></td>
+        <td><%= sushi_roll.description %></td>
+        <td><%= link_to 'Show', sushi_roll %></td>
+        <td><%= link_to 'Edit', edit_sushi_roll_path(sushi_roll) %></td>
+        <td><%= link_to 'Destroy', sushi_roll, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+ <%= button_to 'New Sushi Roll', new_sushi_roll_path, method: :get %>

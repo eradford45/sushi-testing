@@ -1,0 +1,32 @@
+<%= form_with(model: sushi_roll, local: true) do |form| %>
+  <% if sushi_roll.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sushi_roll.errors.count, "error") %> prohibited this sushi_roll from being saved:</h2>
+
+      <ul>
+      <% sushi_roll.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :sushi_roll_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price, id: :sushi_roll_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :sushi_roll_description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

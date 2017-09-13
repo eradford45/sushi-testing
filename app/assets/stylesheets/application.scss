@@ -1,0 +1,41 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import 'semantic-ui';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  -webkit-animation: background .05s cubic-bezier(1,0,0,1) infinite;
+  animation: background .05s cubic-bezier(1,0,0,1) infinite;  
+}
+
+
+@-webkit-keyframes background {
+  0% { background-color: lime; }
+  33% { background-color: red; }  
+  67% { background-color: yellowgreen; }
+  100% { background-color: gold; }
+}
+
+@keyframes background {
+  0% { background-color: red; }
+  33% { background-color: lime; }  
+  67% { background-color: red; }
+  100% { background-color: turquoise; }
+}

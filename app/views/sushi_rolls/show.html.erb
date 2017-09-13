@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sushi_roll.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @sushi_roll.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @sushi_roll.description %>
+</p>
+
+<%= link_to 'Edit', edit_sushi_roll_path(@sushi_roll) %> |
+<%= link_to 'Back', sushi_rolls_path %>
